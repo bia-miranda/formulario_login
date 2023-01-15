@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    background-image: url(https://wallpapercave.com/wp/wp5808771.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fundo);
+    color: rgb(0, 0, 0);
+}
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formulario{
+    background-color: rgba(255, 222, 150, 0.705);
+    padding: 3rem 4rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 95%;
+}
+
+.sociais{
+    display: flex;
+    gap: 40px;
+    text-align: center;
+    justify-content: center;
+}
+.topo img, .sociais img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.input-field img{
+    width: 25px;
+    position: absolute;
+    margin-top: 30px;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    width: 19rem;
+}
+h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+h2:before{
+    content: '';
+    height: 3px;
+    width: 30px;
+    margin-top: 50px;
+    background-color: rgba(230, 80, 80, 0.795);
+    position: absolute;
+}
+h6{
+    cursor: pointer;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color:rgba(116, 44, 44, 0.753);
+}
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgba(230, 81, 81, 0.753);
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 35px;
+    color:rgb(0, 0, 0);
+}
+input:focus{
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+    font-size: 25px;
+    padding: 5px 0;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: rgba(230, 82, 82, 0.795);
+}
+
+
+.bubbles{
+    position: absolute;
+    top: 0;
+    display: flex;
+
+}
+
+.bubbles span{
+    
+    width: 30px;
+    height: 30px;
+    background: var(--change-100);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(255, 167, 116, 0.5),
+    0 0 50px var(--change-100),
+    0 0 100px var(--change-100) ;
+    animation: bubble-animation calc(180s / var(--i)) linear infinite;
+}  
+
+@keyframes bubble-animation {
+    0%{
+        transform: translateY(100vh) scale(0.2);
+    }
+
+    100%{
+        transform: translateY(-10vh) scale(0.8);
+    }
+    
+}
+
+.bubbles span:nth-of-type(even){ 
+    background: #FFD07F;
+    box-shadow: 0 0 0 10px #FFD07F44,
+    0 0 50px #FFD07F,
+    0 0 100px #FFD07F ;
+}
+
